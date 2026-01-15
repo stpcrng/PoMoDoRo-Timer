@@ -1,0 +1,58 @@
+# Android/IntelliJ
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+*.log
+
+# Gradle
+.gradle
+/build
+
+# Kotlin
+*.kotlin_module
+# Kotlin caches and build artifacts
+.kotlinc/
+.kotlin/
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Keystore files
+*.jks
+
+# Ignore generated files
+/app/build/
+
+# Others
+*.apk
+*.ap_
+*.aab
+
+# Kept files
+!gradle/wrapper/gradle-wrapper.jar
+
+# JetBrains
+*.iws
+
+# Local unit test / coverage
+coverage/
+
+# Ignore macOS files
+*.DS_Store
+
+# Git LFS
+# Add large binary patterns here, e.g.:
+# *.png filter=lfs diff=lfs merge=lfs -text
+
+# JVM crash logs
+hs_err_pid*.log
