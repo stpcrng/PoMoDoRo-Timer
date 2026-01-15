@@ -1,3 +1,5 @@
+@file:OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
+
 package com.example.pomodoro
 
 import android.content.Context
@@ -231,9 +233,9 @@ fun TimerScreen(viewModel: TimerViewModel, navController: NavController, onStart
             .padding(16.dp)
     ) {
         ModeSelector(currentMode = currentMode, onModeChange = { viewModel.changeMode(it) })
-        Spacer(modifier = Modifier.height(60.dp))
+        Spacer(modifier = Modifier.height(40.dp)) // уменьшил отступ для лучшего баланса
         TimerDisplay(timeLeft = timeLeft)
-        Spacer(modifier = Modifier.height(60.dp))
+        Spacer(modifier = Modifier.height(40.dp))
         Controls(
             isRunning = isRunning,
             onStartStopClick = { viewModel.startStopTimer() },
@@ -322,7 +324,7 @@ fun Controls(isRunning: Boolean, onStartStopClick: () -> Unit, onResetClick: () 
                     tint = Color.White
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(if (isRunning) "Pause" else "Start", color = Color.White)
+                Text(if (isRunning) "Пауза" else "Старт", color = Color.Black, fontWeight = FontWeight.SemiBold)
             }
 
             OutlinedButton(
@@ -583,3 +585,4 @@ fun SessionHistoryItem(session: TimerSession) {
         }
     }
 }
+
